@@ -1,0 +1,1 @@
+(loginAdmin, senhaAdmin) VALUES ('Trinity2025', 'Xy7!Adm#42Lp');
