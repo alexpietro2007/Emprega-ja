@@ -1,0 +1,52 @@
+<head>  <link rel="stylesheet" href="/CSS/cadastroTrabalhador_Style.css" /></head>
+<div class="container">
+  <div class="progress">
+    <div class="step completed">1</div>
+    <div class="step completed">2</div>
+    <div class="step completed">3</div>
+    <div class="step active">4</div>
+  </div>
+
+  <h2>Como criar sua senha</h2>
+  <p>Sua senha <strong>precisa ter:</strong></p>
+  <ul style="text-align:left; margin-bottom:20px;">
+    <li>Pelo menos <b>8 caracteres</b></li>
+    <li>Pelo menos <b>1 letra maiúscula</b></li>
+    <li>Pelo menos <b>1 número</b></li>
+    <li>Pelo menos <b>1 símbolo especial</b></li>
+  </ul>
+
+  <form action="/cadastro/trabalhador/dados-enviados/senha" method="post" class="form">
+
+
+    {{#if erro}}
+      <p style="color:red">{{erro}}</p>
+    {{/if}}
+
+    <div class="form-group">
+      <label for="senha">*Senha</label>
+      <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+    </div>
+
+    <div class="form-group">
+      <label for="confirmarSenha">*Confirmar senha</label>
+      <input type="password" id="confirmarSenha" name="confirmarSenha" placeholder="Confirme sua senha" required>
+    </div>
+
+    <small><a href="#" onclick="toggleSenha()">👁 Ver/ocultar senha</a></small>
+
+    <div class="form-actions">
+      <button type="submit" class="btn">Pronto</button>
+    </div>
+  </form>
+</div>
+
+<script>
+  function toggleSenha() {
+    const senha = document.getElementById('senha');
+    const confirmar = document.getElementById('confirmarSenha');
+    const type = senha.type === 'password' ? 'text' : 'password';
+    senha.type = type;
+    confirmar.type = type;
+  }
+</script>

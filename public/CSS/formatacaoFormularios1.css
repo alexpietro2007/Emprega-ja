@@ -1,0 +1,118 @@
+/* ===== Reset Básico ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===== Tela Principal ===== */
+body {
+  background: linear-gradient(135deg, #4f46e5, #3b82f6);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* ===== Container do Formulário ===== */
+#tela {
+  width: 100%;
+  max-width: 540px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* ===== Conteúdo Interno ===== */
+#conteinerConteudo_Tela {
+  padding: 40px 35px;
+}
+
+/* ===== Cabeçalho ===== */
+#cabecalhoConteudo_Tela h1 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin-bottom: 30px;
+}
+
+/* ===== Corpo do Formulário ===== */
+#corpoConteudo_Tela label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #374151;
+  font-size: 0.95rem;
+}
+
+.campo {
+  width: 100%;
+  padding: 14px 16px;
+  border: 2px solid #d1d5db;
+  border-radius: 12px;
+  outline: none;
+  font-size: 1rem;
+  background-color: #f9fafb;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.campo:focus {
+  border-color: #2563eb;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(37, 99, 235, 0.3);
+}
+
+/* ===== Rodapé ===== */
+#rodapeConteudo_Tela {
+  text-align: center;
+  margin-top: 10px;
+}
+
+#btEnviarFormulario {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #fff;
+  border: none;
+  padding: 14px 30px;
+  border-radius: 14px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+#btEnviarFormulario:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+}
+
+#btEnviarFormulario:active {
+  transform: scale(0.97);
+}
+
+/* ===== Animação ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Responsividade ===== */
+@media (max-width: 600px) {
+  #conteinerConteudo_Tela {
+    padding: 25px 20px;
+  }
+
+  #cabecalhoConteudo_Tela h1 {
+    font-size: 1.6rem;
+  }
+}

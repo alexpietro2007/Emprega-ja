@@ -1,0 +1,93 @@
+<head>
+  <link rel="stylesheet" href="/CSS/formatacaoFormularios1.css">
+</head>
+
+<div id="tela">
+  <form action="/empresa/cadastro" method="post" enctype="multipart/form-data">
+    <section id="conteinerConteudo_Tela">
+
+      <header id="cabecalhoConteudo_Tela">
+        <h1>Cadastro</h1>
+      </header>
+
+      <main id="corpoConteudo_Tela">
+        <!-- Nome -->
+        <label for="nome">Nome da Empresa</label><br />
+        <input
+          type="text"
+          name="nome"
+          placeholder="Digite o nome da empresa"
+          class="campo"
+        /><br />
+
+        <!-- CNPJ -->
+        <label for="cnpj">CNPJ</label><br />
+        <input
+          type="number"
+          name="cnpj"
+          placeholder="Digite o CNPJ da empresa"
+          class="campo"
+        /><br />
+
+        <!-- Setor -->
+        <label for="setor">Setor</label><br />
+        <input
+          type="text"
+          name="setor"
+          placeholder="Digite o setor da empresa"
+          class="campo"
+        /><br />
+
+        <!-- Email -->
+        <label for="email">Email</label><br />
+        <input
+          type="email"
+          name="email"
+          placeholder="Digite o email da empresa"
+          class="campo"
+        /><br />
+
+        <!-- Telefone -->
+        <label for="telefone">Telefone</label><br />
+        <input
+          type="number"
+          name="telefone"
+          placeholder="Digite o telefone da empresa"
+          class="campo"
+        /><br />
+
+        <!-- Logo -->
+        <label for="logo">Logo da Empresa</label><br />
+        <input
+          type="file"
+          name="logo"
+          accept="image/*"
+          class="campo"
+        /><br />
+
+        <!-- Site -->
+        <label for="site">Site da Empresa</label><br />
+        <input
+          type="text"
+          name="site"
+          placeholder="Digite a URL do site da sua empresa"
+          class="campo"
+        /><br />
+
+        <!-- Senha -->
+        <label for="senha">Senha</label><br />
+        <input
+          type="password"
+          name="senha"
+          placeholder="Crie uma senha segura"
+          class="campo"
+        /><br />
+      </main>
+
+      <footer id="rodapeConteudo_Tela">
+        <input type="submit" value="Pronto" id="btEnviarFormulario" />
+      </footer>
+
+    </section>
+  </form>
+</div>

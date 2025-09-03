@@ -1,0 +1,156 @@
+/* ===== Reset básico ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== Corpo da página ===== */
+body {
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #c3ecff, #e2e2ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* ===== Formulário ===== */
+form {
+  background-color: #ffffffee; /* leve transparência */
+  padding: 50px 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== Labels ===== */
+form label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+  display: block;
+}
+
+/* ===== Inputs ===== */
+form input[type="text"],
+form input[type="password"],
+form input[type="email"],
+form input[type="number"] {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #dcdcdc;
+  border-radius: 12px;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease;
+  background-color: #f9f9f9;
+}
+
+form input:focus {
+  border-color: #003CD3;
+  box-shadow: 0 0 8px rgba(0, 60, 211, 0.3);
+  background-color: #fff;
+}
+
+/* ===== Container senha + botão ===== */
+#divisoria {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+#btVerSenha {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 40px;
+  background-color: #003CD3;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+#btVerSenha:hover {
+  background-color: #0d47a1;
+  transform: scale(1.05);
+}
+
+#btVerSenha img {
+  width: 22px;
+  height: 22px;
+}
+
+/* ===== Botão de login ===== */
+form input[type="submit"] {
+  margin-top: 10px;
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(90deg, #003CD3, #0d47a1);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 60, 211, 0.3);
+}
+
+form input[type="submit"]:hover {
+  background: linear-gradient(90deg, #0d47a1, #003CD3);
+  box-shadow: 0 8px 20px rgba(0, 60, 211, 0.4);
+  transform: translateY(-2px);
+}
+
+/* ===== Mensagem de erro ===== */
+.erro {
+  color: #ff4d4f;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* ===== Responsividade ===== */
+@media (max-width: 400px) {
+  form {
+    width: 90%;
+    padding: 40px 20px;
+  }
+}
+
+/* ===== Botão adicional ===== */
+.login-links {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.btn-empresa {
+  text-align: center;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 12px;
+  font-weight: 700;
+  background-color: #ff6584;
+  color: #fff;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(255, 101, 132, 0.3);
+}
+
+.btn-empresa:hover {
+  background-color: #e04d6b;
+  box-shadow: 0 8px 20px rgba(224, 77, 107, 0.4);
+  transform: translateY(-2px);
+}
